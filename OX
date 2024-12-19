@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+
+	char arr[80];
+
+	int num = 0;
+	scanf_s("%d\n", &num);
+
+	int count1 = 0;
+	int count2 = 0;
+	int count3 = 0;
+	
+
+
+	for (int i = 0; i < num; i++) {
+		scanf("%s", &arr);
+
+		count3 = strlen(arr);
+
+		for (int j = 0; j < count3; j++) {
+			
+			if (arr[j] != '\n') {
+
+				if (arr[j] == 'O') {
+					count1 += 1;
+					count2 += count1;
+					
+				}
+
+				if (arr[j] == 'X') {
+					count1 = 0;
+
+
+
+				}
+
+			}
+
+
+
+		}
+
+		printf("%d\n", count2);
+		count1 = 0;
+		count2 = 0;
+		count3 = 0;
+
+	}
+
+	
+	return 0;
+
+}
